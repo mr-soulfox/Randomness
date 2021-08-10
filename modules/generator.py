@@ -2,6 +2,7 @@ from random import randint
 
 
 class Generator:
+    """DOCUMENTATION... (read Documentation/Generator.txt)"""
 
     array = []
     result_array = []

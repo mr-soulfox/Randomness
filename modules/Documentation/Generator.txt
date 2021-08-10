@@ -1,0 +1,13 @@
+Class to generate random numbers and append in array to analyse and generate graphic
+        Variables:
+            array = Array with all numbers generated
+            result_array = Array with the amount repeated numbers
+            num_max = Maximum number to generate on randint
+            type = Boolean to select if sum or don't sum two random numbers
+            repeated = Number of times will generate new numbers
+
+        Functions:
+            __init__ = Class constructor
+            generate_numbers = Function to generate random number
+            save_number = Function to save number generated and sum random numbers
+            analyse_result = Function to analyse all numbers generated and print on terminal

@@ -23,6 +23,10 @@ class Generator:
 
         print(f'Amount numbers repeated (0 - {max(self.array)}): {self.result_array}')
 
+        max_result = max(self.result_array)
+
+        print(f'Maximum number in result: {max_result} in position {self.result_array.index(max_result)}')
+
     def save_number(self, num):
         if self.type:
             num_to_sum = randint(0, self.num_max)

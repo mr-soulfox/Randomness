@@ -12,10 +12,15 @@ class Generator:
 
     def __init__(self, repeated: int, num_max: int, with_sum: bool):
         print('Initialize number generator... \n')
+        self.clear()
         self.type = with_sum
         self.num_max = num_max
         self.generate_numbers(repeated)
         self.create_graphic()
+
+    def clear(self):
+        self.array = []
+        self.result_array = []
 
     def analyse_result(self):
         print(f'Max number in array: {max(self.array)}')
@@ -46,7 +51,7 @@ class Generator:
         self.analyse_result()
 
     def create_graphic(self):
-        num_max = max(self.result_array) + 10
+        num_max = max(self.result_array) + 50
         labels = []
 
         for i in range(max(self.array) + 1):

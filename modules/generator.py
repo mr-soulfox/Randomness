@@ -1,4 +1,5 @@
 from random import randint
+import matplotlib.pyplot as graphic
 
 
 class Generator:
@@ -14,11 +15,12 @@ class Generator:
         self.type = with_sum
         self.num_max = num_max
         self.generate_numbers(repeated)
+        self.create_graphic()
 
     def analyse_result(self):
         print(f'Max number in array: {max(self.array)}')
 
-        for i in range(max(self.array)):
+        for i in range(max(self.array) + 1):
             self.result_array.append(self.array.count(i))
 
         print(f'Amount numbers repeated (0 - {max(self.array)}): {self.result_array}')
@@ -42,3 +44,17 @@ class Generator:
 
         print(f'Generated array: {self.array}')
         self.analyse_result()
+
+    def create_graphic(self):
+        num_max = max(self.result_array) + 10
+        labels = []
+
+        for i in range(max(self.array) + 1):
+            labels.append(str(i))
+
+        graphic.title('RANDOM GENERATED GRAPHIC')
+        graphic.ylabel('REPEATED', color='blue')
+        graphic.xlabel('NUMBERS', color='green')
+        graphic.axis(ymin=0, ymax=num_max)
+        graphic.bar(labels, self.result_array)
+        graphic.show()

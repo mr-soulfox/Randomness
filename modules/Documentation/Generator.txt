@@ -11,3 +11,4 @@ Class to generate random numbers and append in array to analyse and generate gra
             generate_numbers = Function to generate random number
             save_number = Function to save number generated and sum random numbers
             analyse_result = Function to analyse all numbers generated and print on terminal
+            create_graphic = Function to create plot with PyPlot
